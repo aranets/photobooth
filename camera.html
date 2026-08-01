@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="camera.css">
+  <link rel="stylesheet" href="css/camera.css">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
   <div class="camera-container">
 
     <video id="video" autoplay playsinline></video>
-    <img src="camera-border.png" id="cameraFrame">
+    <img src="images/camera-border.png" id="cameraFrame">
     
     <h1 id="countdown"></h1>
 
@@ -30,7 +30,7 @@
       <!-- Your design selection dropdown sits perfectly in line here -->
       <select id="designSelect" style="font-family: 'Jersey 10', sans-serif; font-size: 20px; border: 5px solid black; padding: 0 10px; cursor: pointer;">
         <option value="classic">NO FRAME (PLAIN)</option>
-        <option value="design1.png">FRAME ART 1</option>
+        <option value="images/design1.png">FRAME ART 1</option>
         <option value="design2.png">FRAME ART 2</option>
         <option value="design3.png">FRAME ART 3</option>
       </select>
@@ -48,7 +48,7 @@
   <!-- Hidden canvas utility -->
   <canvas id="canvas"></canvas>
 
-  <script src="camera.js" defer></script>
+  <script src="scripts/camera.js" defer></script>
 
 </body>
 </html>
