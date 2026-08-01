@@ -281,6 +281,14 @@ saveBtn.addEventListener("click", () => {
 
   const triggerDownload = () => {
     const stripImageURL = finalCanvas.toDataURL("image/png");
+
+      // NEW: send to Flask server
+  fetch("/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ image: stripImageURL })
+  }).catch(err => console.warn("Upload failed:", err));
+
     const downloadLink = document.createElement("a");
     downloadLink.href = stripImageURL;
     downloadLink.download = `photobooth-strip-${Date.now()}.png`;
